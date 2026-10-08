@@ -26,5 +26,9 @@ def index():
             result = f"Error: {str(e)}"
     return render_template("index.html", result=result)
 
+@app.route("/museum")
+def museum():
+    return render_template("museum.html")
+
 if __name__ == "__main__":
     app.run(debug=True)  # Run locally for testing
