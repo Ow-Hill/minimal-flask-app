@@ -26,8 +26,22 @@ def index():
             result = f"Error: {str(e)}"
     return render_template("index.html", result=result)
 
-@app.route("/museum")
+@app.route("/museum", methods=["GET", "POST"])
 def museum():
+
+    if request.method == "POST":
+        try:
+            print("hi1")
+        except Exception as e:
+            print("hi2")
+            result = f"Error: {str(e)}"
+
+
+
+
+
+
+    print("hi1")
     return render_template("museum.html")
 
 if __name__ == "__main__":
